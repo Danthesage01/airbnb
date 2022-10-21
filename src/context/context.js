@@ -1,14 +1,11 @@
 import React, { useContext, createContext, useState } from "react";
 import data from "../data";
-import shared from "../assets/images/shared.png";
-// import { SiHomeadvisor } from "react-icons/si";
 
 const AirbnbContext = createContext();
-
 const AirbnbProvider = ({ children }) => {
-  const [listing, setListing] = useState(data);
+  const [listings, setListings] = useState(data);
 
-  const listingCategories = listing.reduce(
+  const listingCategories = listings.reduce(
     (acc, item) => {
       if (!acc.includes(item.category)) {
         acc.push(item.category);
@@ -17,7 +14,7 @@ const AirbnbProvider = ({ children }) => {
     },
     ["Shared homes"]
   );
-  const listingIcons = listing.reduce(
+  const listingIcons = listings.reduce(
     (acc, item) => {
       if (!acc.includes(item.icon)) {
         acc.push(item.icon);
@@ -27,11 +24,8 @@ const AirbnbProvider = ({ children }) => {
     ["/imgs/shared.png"]
   );
 
-  console.log(listingIcons, listingCategories);
   const [categories, setCategories] = useState(listingCategories);
   const [icons, setIcons] = useState(listingIcons);
-
-  console.log(categories.flat())
   const [stateCategory, setCategory] = useState("Shared homes");
 
   const handleClick = (e, category) => {
@@ -40,17 +34,25 @@ const AirbnbProvider = ({ children }) => {
   };
   const filterProjects = (cat) => {
     if (cat === "Shared homes") {
-      setListing(data);
+      setListings(data);
       return;
     }
     let newListing = [...data];
     newListing = newListing.filter((project) => project.category === cat);
-    setListing(newListing);
+    setListings(newListing);
   };
 
   return (
     <AirbnbContext.Provider
-      value={{ listing, categories, handleClick, setCategories, stateCategory, icons, setIcons }}
+      value={{
+        listings,
+        categories,
+        handleClick,
+        setCategories,
+        stateCategory,
+        icons,
+        setIcons,
+      }}
     >
       {children}
     </AirbnbContext.Provider>

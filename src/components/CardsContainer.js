@@ -2,11 +2,11 @@ import React from "react";
 import CardItem from "./CardItem";
 import { useGlobalAirbnbContext } from "../context/context";
 const CardsContainer = () => {
-  const { listing } = useGlobalAirbnbContext();
+  const { listings } = useGlobalAirbnbContext();
   return (
     <div className="section-center">
       <div className="container-center">
-        {listing.map((list) => {
+        {listings.map((list) => {
           return (
             <CardItem
               role="button"

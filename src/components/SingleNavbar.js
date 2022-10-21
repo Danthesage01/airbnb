@@ -8,11 +8,10 @@ import { IoPersonCircleSharp } from "react-icons/io5";
 import filter from "../assets/images/filter.svg";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-
+const SingleNavbar = () => {
   return (
-    <Wrapper home>
-      <div className="section-center nav-center">
+    <Wrapper>
+      <div className="single-center nav-center">
         <Link to="/">
           <img
             src={logo}
@@ -67,4 +66,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SingleNavbar;

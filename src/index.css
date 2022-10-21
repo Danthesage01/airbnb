@@ -72,10 +72,10 @@ h3 {
   font-size: 1.25rem;
 }
 h4 {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 p {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -88,7 +88,7 @@ p {
     font-size: 1.75rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   body {
     font-size: 1rem;
@@ -151,3 +151,14 @@ Global classes
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* single card */
+.single-bb{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 98vw;
+}
+  .single-center {
+    width: 88vw;
+    max-width: 1170px;
+    margin: 0 auto;
+  }

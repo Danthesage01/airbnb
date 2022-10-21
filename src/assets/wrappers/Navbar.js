@@ -6,7 +6,7 @@ const Wrapper = styled.nav`
   align-items: center;
   justify-content: center;
   background: var(--clr-white);
-  box-shadow: 0 0.045rem 0px 0px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0.045rem 0px 0px rgba(0, 0, 0, 0.2); */
   .logo {
     display: none;
   }
@@ -113,7 +113,10 @@ const Wrapper = styled.nav`
     background: rgba(0, 0, 0, 0.2);
   }
   @media screen and (min-width: 742px) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: ${(props) =>
+      props.home ? "1px solid rgba(0, 0, 0, 0.1)" : "none"};
+
+      /* background: ${props => props.home ? "red" : "yellow"}; */
     .search-bar-sm {
       display: none;
     }
