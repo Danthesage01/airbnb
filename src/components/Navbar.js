@@ -1,0 +1,65 @@
+import React from "react";
+import Wrapper from "../assets/wrappers/Navbar";
+import logo from "../assets/images/airbnb.svg";
+import { FiSearch, FiGlobe } from "react-icons/fi";
+import { GiHamburgerMenu } from "react-icons/gi";
+// import { IoPersonCircleSharp } from "react-icons/io";
+import { IoPersonCircleSharp } from "react-icons/io5";
+import filter from "../assets/images/filter.svg";
+const Navbar = () => {
+  return (
+    <Wrapper>
+      <div className="section-center nav-center">
+        <img
+          src={logo}
+          alt="airbnb-logo"
+          className="logo"
+        />
+        <div className=" search-bar-lg">
+          <div className="text-bold text-bold-pd">Anywhere</div>
+          <span className="divider"></span>
+          <div className="text-bold">Any week</div>
+          <span className="divider"></span>
+          <div className="text-faint">Add guests</div>
+          <div className="search-icon">
+            <FiSearch color="#fff" />
+          </div>
+        </div>
+        <div className="search-bar-sm">
+          <div>
+            <FiSearch className="bar-search" />
+          </div>
+          <div className="bar-sm-text">
+            <div className="bar-text"> Where to?</div>
+            <div className="bar-subtext">
+              <div className="text-faint text-bold-pd">Anywhere</div>
+              <span className="text-dot"></span>
+              <div className="text-faint">Any week</div>
+              <span className="text-dot"></span>
+              <div className="text-faint">Add guests</div>
+            </div>
+          </div>
+          <div className="bar-filter">
+            <img
+              src={filter}
+              alt="filter"
+              className="bar-img"
+            />
+          </div>
+        </div>
+        <div className="host-bar">
+          <div className="text-bold host-text">Become a Host</div>
+          <div className="host-globe">
+            <FiGlobe />
+          </div>
+          <div className="host-logo">
+            <GiHamburgerMenu className="host-ham"/>
+            <IoPersonCircleSharp fontSize={"2.2rem"} />
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  );
+};
+
+export default Navbar;
