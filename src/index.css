@@ -153,12 +153,120 @@ Global classes
 }
 
 /* single card */
-.single-bb{
+.single-bb {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   width: 98vw;
 }
-  .single-center {
-    width: 88vw;
-    max-width: 1170px;
-    margin: 0 auto;
+.single-center {
+  width: 88vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.text-dot {
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  align-self: center;
+  margin-top: 0.1rem;
+}
+
+@media screen and (min-width: 742px) {
+  .single-img-container {
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas:
+      "a a b c"
+      "a a d e";
+    gap: 1rem;
   }
+  .single-img {
+    width: 100%;
+    height: 100%;
+  }
+  .single {
+    height: 100%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 1);
+    border-radius: var(--borderRadius);
+  }
+  .imageOne {
+    grid-area: a;
+  }
+  .single-img-one {
+    border-top-left-radius: var(--borderRadius);
+    border-bottom-left-radius: var(--borderRadius);
+  }
+  .imageTwo {
+    grid-area: b;
+  }
+  .imageThree {
+    grid-area: c;
+  }
+  .single-img-three {
+    border-top-right-radius: var(--borderRadius);
+  }
+  .imageFour {
+    grid-area: d;
+  }
+  .imageFive {
+    grid-area: e;
+  }
+  .single-img-five {
+    border-bottom-right-radius: var(--borderRadius);
+  }
+
+  .single:hover .single-img {
+    opacity: 0.9;
+  }
+  .single-info {
+    padding-top: 1.5rem;
+  }
+
+  .single-title {
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+  .single-title span {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding-right: 0.6rem;
+  }
+  .single-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text2-dot {
+    height: 3px;
+    width: 3px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    align-self: center;
+    margin-top: 0.1rem;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+  .start-subtitle {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
+  .end-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .end-subtitle .e-icons {
+    font-size: 1.1rem;
+    padding-top: 0.3rem;
+        cursor: pointer;
+  }
+  .end-subtitle .underline{
+    cursor: pointer;
+  }
+}
