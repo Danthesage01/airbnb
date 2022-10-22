@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const Wrapper = styled.footer`
+display: none;
+  @media screen and (min-width: 742px) {
   height: 4rem;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
@@ -46,6 +48,7 @@ const Wrapper = styled.footer`
     align-items: center;
     gap: 0.4rem;
     font-weight: 500;
+  }
   }
 `;
 
