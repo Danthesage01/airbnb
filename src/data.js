@@ -804,6 +804,426 @@ const data = [
       ],
     },
   },
+  {
+    id: 24,
+    category: "Houseboats",
+    icon: "/imgs/houseboat.png",
+    title: "Suya Avenue",
+    host: "Aboki Japa",
+    dates: "Mar 29 - Apr 2",
+    cost: 450000,
+    rating: 3.9,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5a84899f-229b-400b-9220-31c2e1fbb52a.jpeg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5a84899f-229b-400b-9220-31c2e1fbb52a.jpeg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5ac2e5bc-6569-46b4-a2cf-f9f7350f73e6.jpeg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/48d48d83-147a-4d44-8506-cdea93016ec0.jpeg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/1290795f-37d0-44a8-b0c9-46bf4e5feac8.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/fdaa6c53-860b-45b5-9c69-4fe33091a007.jpeg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 25,
+    category: "Houseboats",
+    icon: "/imgs/houseboat.png",
+    title: "Avenue of breath",
+    host: "Japa Sapa",
+    dates: "Feb 29 - March 2",
+    cost: 50000,
+    rating: 3.6,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/1290795f-37d0-44a8-b0c9-46bf4e5feac8.jpg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/1290795f-37d0-44a8-b0c9-46bf4e5feac8.jpg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5ac2e5bc-6569-46b4-a2cf-f9f7350f73e6.jpeg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/48d48d83-147a-4d44-8506-cdea93016ec0.jpeg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5a84899f-229b-400b-9220-31c2e1fbb52a.jpeg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/fdaa6c53-860b-45b5-9c69-4fe33091a007.jpeg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 26,
+    category: "Houseboats",
+    icon: "/imgs/houseboat.png",
+    title: "Labi Close",
+    host: "Toyin Japa",
+    dates: "Jun 29 - Jun 2",
+    cost: 650000,
+    rating: 3.9,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/fdaa6c53-860b-45b5-9c69-4fe33091a007.jpeg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/fdaa6c53-860b-45b5-9c69-4fe33091a007.jpeg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5ac2e5bc-6569-46b4-a2cf-f9f7350f73e6.jpeg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/48d48d83-147a-4d44-8506-cdea93016ec0.jpeg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/1290795f-37d0-44a8-b0c9-46bf4e5feac8.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5a84899f-229b-400b-9220-31c2e1fbb52a.jpeg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 27,
+    category: "Houseboats",
+    icon: "/imgs/houseboat.png",
+    title: "Close Jabi",
+    host: "Toyin Smart",
+    dates: "July 9 - July 12",
+    cost: 650000,
+    rating: 4.9,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/48d48d83-147a-4d44-8506-cdea93016ec0.jpeg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5ac2e5bc-6569-46b4-a2cf-f9f7350f73e6.jpeg?im_w=1200",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5ac2e5bc-6569-46b4-a2cf-f9f7350f73e6.jpeg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/fdaa6c53-860b-45b5-9c69-4fe33091a007.jpeg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/1290795f-37d0-44a8-b0c9-46bf4e5feac8.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-16472272/original/5a84899f-229b-400b-9220-31c2e1fbb52a.jpeg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 28,
+    category: "5G wifi",
+    icon: "/imgs/wifi.png",
+    title: "Mega Estate",
+    host: "Igwe Mark",
+    dates: "June 3 - June 7",
+    cost: 500000,
+    rating: 3.9,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/30d7dc7a-8903-4185-ade3-a6d700727507.jpg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/30d7dc7a-8903-4185-ade3-a6d700727507.jpg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/fd1d7fb6-77e0-471c-9aa1-76353e2760b1.jpg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/48530e80-ea94-4ab4-81da-9046d3a41bd6.jpg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/82db5282-6fda-4a88-8b4b-6560c226714e.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/e4501387-9825-4997-bfe6-ff40a9f86bc4.jpg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 29,
+    category: "5G wifi",
+    icon: "/imgs/wifi.png",
+    title: "Olunyole Arena",
+    host: "Festus Rasheed",
+    dates: "June 8 - June 10",
+    cost: 100000,
+    rating: 5.0,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/e4501387-9825-4997-bfe6-ff40a9f86bc4.jpg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/e4501387-9825-4997-bfe6-ff40a9f86bc4.jpg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/fd1d7fb6-77e0-471c-9aa1-76353e2760b1.jpg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/48530e80-ea94-4ab4-81da-9046d3a41bd6.jpg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/82db5282-6fda-4a88-8b4b-6560c226714e.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/30d7dc7a-8903-4185-ade3-a6d700727507.jpg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 30,
+    category: "5G wifi",
+    icon: "/imgs/wifi.png",
+    title: "Ikoyi Mega Arena",
+    host: "Destiny Igwe",
+    dates: "June 3 - June 7",
+    cost: 100000,
+    rating: 5.0,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/48530e80-ea94-4ab4-81da-9046d3a41bd6.jpg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/48530e80-ea94-4ab4-81da-9046d3a41bd6.jpg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/fd1d7fb6-77e0-471c-9aa1-76353e2760b1.jpg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/48530e80-ea94-4ab4-81da-9046d3a41bd6.jpg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/82db5282-6fda-4a88-8b4b-6560c226714e.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/e4501387-9825-4997-bfe6-ff40a9f86bc4.jpg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 31,
+    category: "OMG",
+    icon: "/imgs/home.png",
+    title: "King Suite",
+    host: "Dunsin Ayefele",
+    dates: "Dec 7 - Dec 8",
+    cost: 1000000,
+    rating: 5.0,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/prohost-api/Hosting-584469386220279136/original/227d4c26-43d5-42da-ad84-d039515c0bad.jpeg?im_w=1200",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/prohost-api/Hosting-584469386220279136/original/227d4c26-43d5-42da-ad84-d039515c0bad.jpeg?im_w=1200",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/b491bc89-a4b4-42e4-8a8c-190ced1af3e9.jpg?im_w=1440",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/477803fa-4956-4927-a261-6051e83bb4f9.jpg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/e2350b6d-1259-4ef8-9dff-881293e813a3.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/883b955b-e23b-4d93-b82f-88830099f035.jpg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 32,
+    category: "Desert",
+    icon: "/imgs/desert.png",
+    title: "5G Queue",
+    host: "Justus Lover",
+    dates: "May 20 - May 23",
+    cost: 500000,
+    rating: 5.0,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/bd1354ac-06c5-4d59-bb0b-2aff857f8e42.jpg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/bd1354ac-06c5-4d59-bb0b-2aff857f8e42.jpg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-17412435/original/8ae95f2a-3259-461d-b4b7-2d097eafe8a5.jpeg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/11bb6fd5-4060-4e69-a25c-197b271b09bc.jpg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/b4ab0776-3086-4036-8926-e4dbba390b88.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/bb12c7fe-f1de-4d51-a42b-647c3807c86e.jpg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 33,
+    category: "Desert",
+    icon: "/imgs/desert.png",
+    title: "5G Queue",
+    host: "Abdul Jagon",
+    dates: "Oct 20 - Oct 23",
+    cost: 1500000,
+    rating: 4.5,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/b4ab0776-3086-4036-8926-e4dbba390b88.jpg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/b4ab0776-3086-4036-8926-e4dbba390b88.jpg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-17412435/original/8ae95f2a-3259-461d-b4b7-2d097eafe8a5.jpeg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/11bb6fd5-4060-4e69-a25c-197b271b09bc.jpg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/bd1354ac-06c5-4d59-bb0b-2aff857f8e42.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/bb12c7fe-f1de-4d51-a42b-647c3807c86e.jpg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 34,
+    category: "Bed & breakfasts",
+    icon: "/imgs/breakfast.png",
+    title: "Bridge Tea",
+    host: "Ana Pelosi",
+    dates: "July 27 - Aug 2",
+    cost: 500000,
+    rating: 4.0,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/miso/Hosting-45152686/original/834477c3-f63b-47bc-a582-d15bf3b68ac2.jpeg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-45152686/original/834477c3-f63b-47bc-a582-d15bf3b68ac2.jpeg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/edbb7838-9d2a-4897-8960-f3fce13e985e.jpg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/596e0cc9-71e1-4c7c-b34c-d33e6f150de2.jpg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/83be28eb-2f67-4155-a5b0-a3f627e2205b.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/9583175e-d36a-4734-ba4f-459822d5c2b1.jpg?im_w=1440",
+        },
+      ],
+    },
+  },
+  {
+    id: 35,
+    category: "Bed & breakfasts",
+    icon: "/imgs/breakfast.png",
+    title: "Bridge Tea",
+    host: "Hope Baby",
+    dates: "July 20 - July 21",
+    cost: 500000,
+    rating: 5.0,
+    images: {
+      main: "https://a0.muscache.com/im/pictures/9583175e-d36a-4734-ba4f-459822d5c2b1.jpg?im_w=1440",
+      sub: [
+        {
+          id: 1,
+          url: "https://a0.muscache.com/im/pictures/9583175e-d36a-4734-ba4f-459822d5c2b1.jpg?im_w=1440",
+        },
+        {
+          id: 2,
+          url: "https://a0.muscache.com/im/pictures/edbb7838-9d2a-4897-8960-f3fce13e985e.jpg?im_w=1200",
+        },
+        {
+          id: 3,
+          url: "https://a0.muscache.com/im/pictures/596e0cc9-71e1-4c7c-b34c-d33e6f150de2.jpg?im_w=1440",
+        },
+        {
+          id: 4,
+          url: "https://a0.muscache.com/im/pictures/83be28eb-2f67-4155-a5b0-a3f627e2205b.jpg?im_w=1440",
+        },
+        {
+          id: 5,
+          url: "https://a0.muscache.com/im/pictures/miso/Hosting-45152686/original/834477c3-f63b-47bc-a582-d15bf3b68ac2.jpeg?im_w=1440",
+        },
+      ],
+    },
+  },
 ];
 
 export default data;

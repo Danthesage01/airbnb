@@ -6,15 +6,17 @@ import { MdOutlineIosShare } from "react-icons/md";
 import { AiOutlineHeart } from "react-icons/ai";
 import Error from "./Error";
 import SingleNavbar from "../components/SingleNavbar";
-import { useGlobalAirbnbContext } from "../context/context";
+
+import data from "../data";
 const SingleCardPage = () => {
-  const { listings } = useGlobalAirbnbContext();
   const { id } = useParams();
   const index = id - 1;
-  const singleList = listings[index];
-  if (listings[index] === undefined || listings.length < 1) {
+
+  if (data[index] === undefined || data.length < 1) {
     return <Error />;
   }
+
+  const singleList = data[index];
   const { images, title, category, host, rating } = singleList;
   const reviews = Math.ceil(rating * 8);
   document.title = title;
