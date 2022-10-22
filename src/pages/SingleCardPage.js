@@ -4,6 +4,8 @@ import { FaStar } from "react-icons/fa";
 import { BsTranslate } from "react-icons/bs";
 import { MdOutlineIosShare } from "react-icons/md";
 import { AiOutlineHeart } from "react-icons/ai";
+import { FaChevronLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Error from "./Error";
 import SingleNavbar from "../components/SingleNavbar";
 
@@ -24,9 +26,34 @@ const SingleCardPage = () => {
 
   return (
     <div>
-      <SingleNavbar />
+      <div className="single-nav">
+        <SingleNavbar />
+      </div>
       <div className="single-bb"></div>
-      <div className="single-center ">
+      <div className="single-nav-img">
+        <img
+          src={sub[0].url}
+          alt="one"
+          className="single-img"
+        />
+        <div className="single-icon-start">
+          <Link
+            to="/"
+            className="single-icon-icon"
+          >
+            <FaChevronLeft fontSize="1rem" />
+          </Link>
+        </div>
+        <div className="single-icon-end">
+          <div className="single-icon-icon">
+            <MdOutlineIosShare fontSize="1rem" />
+          </div>
+          <div className="single-icon-icon">
+            <AiOutlineHeart fontSize="1rem" />
+          </div>
+        </div>
+      </div>
+      <div className="single-center single-condition">
         <div className="single-info">
           <h4 className="single-title">
             <span>
@@ -74,7 +101,7 @@ const SingleCardPage = () => {
               <img
                 src={sub[1].url}
                 alt="two"
-                className="single-img "
+                className="single-img"
               />
             </div>
           </div>
@@ -92,7 +119,7 @@ const SingleCardPage = () => {
               <img
                 src={sub[3].url}
                 alt="four"
-                className="single-img"
+                className="single-img "
               />
             </div>
           </div>

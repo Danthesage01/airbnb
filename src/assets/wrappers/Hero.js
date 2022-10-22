@@ -34,9 +34,10 @@ const Wrapper = styled.div`
   }
   .hero-icon {
     width: 1rem;
+    padding-bottom: 0.3rem;
   }
   .hero-category {
-    margin-top: -0.3rem;
+    margin-top: -0.1rem;
     display: block;
     font-size: 0.6rem;
     opacity: 1;

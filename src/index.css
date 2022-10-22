@@ -162,6 +162,47 @@ Global classes
   max-width: 1170px;
   margin: 0 auto;
 }
+.single-condition {
+  display: flex;
+  flex-direction: column;
+}
+.single-img-container {
+ display: none;
+}
+.single-info {
+  order: 0;
+  padding-top: 0.5rem
+}
+.single-title {
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+  .single-title span {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding-right: 0.6rem;
+  }
+  .single-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .start-subtitle {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
+  .text2-dot {
+    height: 3px;
+    width: 3px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    align-self: center;
+    margin-top: 0.1rem;
+  }
+  .underline {
+    text-decoration: underline;
+  }
 .text-dot {
   height: 2px;
   width: 2px;
@@ -170,9 +211,48 @@ Global classes
   align-self: center;
   margin-top: 0.1rem;
 }
-
+.single-nav{
+  display: none;
+}
+.end-subtitle{
+  display: none;
+}
+.single-nav-img{
+  position: relative;
+}
+.single-icon-start{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  transform: translate(50);
+}
+.single-icon-end{
+   position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.single-icon-icon{
+  width: 2.2rem;
+  height: 2.2rem;
+  background: white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 @media screen and (min-width: 742px) {
+  .single-nav-img{
+    display: none;
+  }.single-nav{
+  display: block;
+}
   .single-img-container {
+    order: 0;
     padding-top: 1.5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -222,6 +302,7 @@ Global classes
     opacity: 0.9;
   }
   .single-info {
+    order: -1;
     padding-top: 1.5rem;
   }
 
@@ -239,17 +320,7 @@ Global classes
     align-items: center;
     justify-content: space-between;
   }
-  .text2-dot {
-    height: 3px;
-    width: 3px;
-    border-radius: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    align-self: center;
-    margin-top: 0.1rem;
-  }
-  .underline {
-    text-decoration: underline;
-  }
+  
   .start-subtitle {
     display: flex;
     justify-content: flex-start;
@@ -264,9 +335,9 @@ Global classes
   .end-subtitle .e-icons {
     font-size: 1.1rem;
     padding-top: 0.3rem;
-        cursor: pointer;
+    cursor: pointer;
   }
-  .end-subtitle .underline{
+  .end-subtitle .underline {
     cursor: pointer;
   }
 }
