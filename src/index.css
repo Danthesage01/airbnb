@@ -286,9 +286,7 @@ Global classes
   height: 90vh;
   object-fit: cover;
 }
-.small-screen{
-  min-height: fit-content;
-}
+
 @media screen and (min-width: 742px) {
 
   .single-bb {
