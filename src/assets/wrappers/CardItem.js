@@ -31,17 +31,18 @@ const Wrapper = styled.section`
     margin-top: -0.3rem;
   }
   .card-circle {
-    width: 6px;
-    height: 6px;
+    width: 0.8rem;
+    height: 0.8rem;
     border: 1px solid #ccc;
     background: #ccc;
     border-radius: 100%;
     margin: 2px;
   }
-  .card-circle:first-child {
+  .card-circle-active {
     background: white;
   }
   .card-circle-wrapper {
+    z-index: 2;
     position: absolute;
     left: 50%;
     bottom: 2%;

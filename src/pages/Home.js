@@ -1,5 +1,4 @@
-import {  CardsContainer, Footer, Banner } from "../components";
-
+import { CardsContainer, Footer, Banner } from "../components";
 const Home = () => {
   return (
     <div>

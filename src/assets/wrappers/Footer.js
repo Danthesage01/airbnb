@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.footer`
-display: none;
-  @media screen and (min-width: 742px) {
+  z-index: 100;
   height: 4rem;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
@@ -13,42 +12,63 @@ display: none;
   bottom: 0;
   width: 100vw;
   box-shadow: 0 0.045rem 0px 0px rgba(0, 0, 0, 0.2);
-  .footer-center {
+  .sm-footer-center {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
   }
-  .footer-info {
-    display: flex;
-    gap: 0.5rem;
+
+  .hero-category {
+    margin-top: -0.1rem;
+    display: block;
+    font-size: 0.6rem;
+    opacity: 1;
   }
-  .start-footer {
-    display: flex;
-    justify-content: flex-start;
-    gap: 0.6rem;
+  .bg-footer-center {
+    display: none;
   }
-  .end-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  .end-footer .e-icons {
-    font-size: 1.1rem;
-    padding-top: 0.3rem;
-    cursor: pointer;
-  }
-  .end-footer .e-icons-last {
-    font-size: 1.5rem;
-    padding-top: 0.4rem;
-  }
-  .end-footer-info {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-weight: 500;
-  }
+
+  @media screen and (min-width: 742px) {
+    .sm-footer-center {
+      display: none;
+    }
+    .bg-footer-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .footer-info {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .start-footer {
+      display: flex;
+      justify-content: flex-start;
+      gap: 0.6rem;
+    }
+    .end-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .end-footer .e-icons {
+      font-size: 1.1rem;
+      padding-top: 0.3rem;
+      cursor: pointer;
+    }
+    .end-footer .e-icons-last {
+      font-size: 1.5rem;
+      padding-top: 0.4rem;
+    }
+    .end-footer-info {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+    }
   }
 `;
 

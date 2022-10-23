@@ -7,13 +7,21 @@ import { Link } from "react-router-dom";
 const CardItem = (list) => {
   const { images, cost, dates, host, title, rating, id } = list;
   const { sub } = images;
-  const [like, setLike] = useState(false);
 
-  const newSub = sub.map((_, index) => {
+  const [like, setLike] = useState(false);
+  const [main, setMain] = useState(sub[0].url)
+
+
+  const newSub = sub.map((image, index) => {
     return (
       <div
         key={index}
-        className="card-circle"
+        onClick={() => setMain(sub[index].url)}
+        className={
+          main === image.url
+            ? "card-circle card-circle-active"
+            : "card-circle"
+        }
       ></div>
     );
   });
@@ -22,12 +30,12 @@ const CardItem = (list) => {
       <div className="card-img-wrapper">
         <Link to={`/${id}`}>
           <img
-            src={images.main}
+            src={main}
             alt={title}
             className="card-img"
           />
-          <div className="card-circle-wrapper">{newSub}</div>
         </Link>
+        <div className="card-circle-wrapper">{newSub}</div>
         <div
           className={
             like ? "card-heart-wrapper heart-like" : "card-heart-wrapper"

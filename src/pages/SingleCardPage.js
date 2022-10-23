@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { BsTranslate } from "react-icons/bs";
 import { MdOutlineIosShare } from "react-icons/md";
-import { AiOutlineHeart } from "react-icons/ai";
-import { FaChevronLeft } from "react-icons/fa";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Error from "./Error";
 import SingleNavbar from "../components/SingleNavbar";
 
 import data from "../data";
 const SingleCardPage = () => {
+  const [like, setLike] = useState(false);
   const { id } = useParams();
   const index = id - 1;
+
+  const [slideIndex, setSlideIndex] = useState(0);
 
   if (data[index] === undefined || data.length < 1) {
     return <Error />;
@@ -23,6 +26,23 @@ const SingleCardPage = () => {
   const reviews = Math.ceil(rating * 8);
   document.title = title;
   const { sub } = images;
+  const image = sub[slideIndex].url;
+
+  const chechIndex = (number) => {
+    if (number > sub.length - 1) {
+      return 0;
+    }
+    if (number < 0) {
+      return data.length - 1;
+    }
+    return number;
+  };
+  const moveNext = () => {
+    setSlideIndex((prevIndex) => {
+      let newIndex = prevIndex + 1;
+      return chechIndex(newIndex);
+    });
+  };
 
   return (
     <div>
@@ -32,7 +52,7 @@ const SingleCardPage = () => {
       <div className="single-bb"></div>
       <div className="single-nav-img">
         <img
-          src={sub[0].url}
+          src={image}
           alt="one"
           className="single-img"
         />
@@ -45,12 +65,49 @@ const SingleCardPage = () => {
           </Link>
         </div>
         <div className="single-icon-end">
-          <div className="single-icon-icon">
+          {/* <div className="single-icon-icon">
             <MdOutlineIosShare fontSize="1rem" />
+          </div> */}
+          <div
+            className={
+              like ? "single-icon-icon heart-like" : "single-icon-icon"
+            }
+            onClick={() => setLike(!like)}
+          >
+            {like ? <AiFillHeart /> : <AiOutlineHeart fontSize="1rem" />}
           </div>
-          <div className="single-icon-icon">
-            <AiOutlineHeart fontSize="1rem" />
+        </div>
+        <div className="single-text-text">
+          <h6 className="single-title">
+            <span>
+              <BsTranslate />
+            </span>
+            {title}
+          </h6>
+          <div className="start-subtitle">
+            <span>
+              <FaStar /> {rating.toFixed(1)}{" "}
+            </span>
+            <div className="text2-dot"></div>
+            <span className="underline"> {reviews} reviews </span>
+            <div className="text2-dot"></div>
+            <span className="underline">
+              {host}, {category}{" "}
+            </span>
           </div>
+        </div>
+        <div className="single-move-next">
+          <div
+            className="single-icon-icon"
+            onClick={() => moveNext()}
+          >
+            <FaChevronRight fontSize="1rem" />
+          </div>
+        </div>
+        <div className="single-move-count">
+          <p >
+            {slideIndex + 1}/{sub.length}
+          </p>
         </div>
       </div>
       <div className="single-center single-condition">
