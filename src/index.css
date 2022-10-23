@@ -280,10 +280,10 @@ Global classes
 }
 .single-nav-img {
   position: relative;
-  min-height: 99vh;
+  min-height: 90vh;
 }
 .single-nav-img .single-img {
-  min-height: 99.9vh;
+  min-height: 90vh;
   object-fit: cover;
   /* width: 100%; */
 }
