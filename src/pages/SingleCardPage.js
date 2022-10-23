@@ -45,7 +45,7 @@ const SingleCardPage = () => {
   };
 
   return (
-    <div>
+    <div className="small-screen">
       <div className="single-nav">
         <SingleNavbar />
       </div>

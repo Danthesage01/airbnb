@@ -197,7 +197,7 @@ Global classes
   border-radius: 100%;
   background: rgba(0, 0, 0, 0.4);
   align-self: center;
-  margin-top: 0.1rem;
+  padding-top: 0.1rem;
 }
 .underline {
   text-decoration: underline;
@@ -216,15 +216,7 @@ Global classes
 .end-subtitle {
   display: none;
 }
-.single-nav-img {
-  position: relative;
-  min-height: 100vh;
-}
-.single-nav-img .single-img {
-  min-height: 100vh;
-  object-fit: cover;
-  width: 100%;
-}
+
 .single-icon-start {
   position: absolute;
   top: 5%;
@@ -286,7 +278,22 @@ Global classes
 .heart-like {
   color: var(--clr-airbnb);
 }
+.single-nav-img {
+  position: relative;
+  min-height: 99vh;
+}
+.single-nav-img .single-img {
+  min-height: 99.9vh;
+  object-fit: cover;
+  /* width: 100%; */
+}
+.small-screen{
+  min-height: 100vh;
+}
 @media screen and (min-width: 742px) {
+  .small-screen{
+  min-height: 0;
+}
   .single-bb {
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
