@@ -31,10 +31,10 @@ const Wrapper = styled.section`
     margin-top: -0.3rem;
   }
   .card-circle {
-    width: 0.8rem;
-    height: 0.8rem;
-    border: 1px solid #ccc;
-    background: #ccc;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #f0f0f0;
+    /* background: #ccc; */
     border-radius: 100%;
     margin: 2px;
   }
