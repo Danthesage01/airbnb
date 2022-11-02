@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, Error, SingleCardPage } from "./pages/index";
-
+import React from "react";
 function App() {
-  return (
+    return (
     <Router>
       <Routes>
         <Route

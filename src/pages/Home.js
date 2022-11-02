@@ -1,8 +1,10 @@
-import { CardsContainer, Footer, Banner } from "../components";
+import { CardsContainer, Footer } from "../components";
+import NavbarHero from "../components/NavbarHero";
 const Home = () => {
   return (
     <div>
-      <Banner />
+      {/* <Banner /> */}
+      <NavbarHero />
       <CardsContainer />
       <Footer />
     </div>

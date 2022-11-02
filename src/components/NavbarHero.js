@@ -1,4 +1,4 @@
-import Wrapper from "../assets/wrappers/Navbar";
+import Wrapper from "../assets/wrappers/NavbarHero";
 import logo from "../assets/images/airbnb.svg";
 import { FiSearch, FiGlobe } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -7,13 +7,38 @@ import { IoPersonCircleSharp } from "react-icons/io5";
 import filter from "../assets/images/filter.svg";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import LoginModal from "./LoginModal";
-const Navbar = () => {
+
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
+import { LeftArrow, RightArrow } from "./Arrows";
+// import data from "../data";
+import { CardIcon } from "./CardIcon";
+import usePreventBodyScroll from "../hooks/usePreventBodyScroll";
+import { useGlobalAirbnbContext } from "../context/context";
+
+function onWheel(apiObj, ev) {
+  const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
+
+  if (isThouchpad) {
+    ev.stopPropagation();
+    return;
+  }
+
+  if (ev.deltaY < 0) {
+    apiObj.scrollNext();
+  } else if (ev.deltaY > 0) {
+    apiObj.scrollPrev();
+  }
+}
+
+const NavbarHero = () => {
   const [showLogin, setShowLogin] = useState(false);
   console.log(showLogin);
+
+  const { categories, icons } = useGlobalAirbnbContext();
+  const { disableScroll, enableScroll } = usePreventBodyScroll();
   return (
-    <React.Fragment>
-      <Wrapper home>
+    <Wrapper>
+      <div className="nav">
         <div className="section-center nav-center">
           <Link to="/">
             <img
@@ -72,9 +97,52 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </Wrapper>
-    </React.Fragment>
+      </div>
+      <div className="hero">
+        <div className="section-center hero-global">
+          <div
+            onMouseEnter={disableScroll}
+            onMouseLeave={enableScroll}
+            className="hero-gscroll"
+          >
+            <ScrollMenu
+              LeftArrow={LeftArrow}
+              RightArrow={RightArrow}
+              onWheel={onWheel}
+            >
+              {categories.map((category, itemIndex) => {
+                const icon = icons[itemIndex];
+                return (
+                  <CardIcon
+                    category={category}
+                    icon={icon}
+                    itemId={itemIndex} // NOTE: itemId is required for track items
+                    key={itemIndex}
+                  />
+                );
+              })}
+            </ScrollMenu>
+          </div>
+          <div className=".hero-gbtn">
+            <button className="hero-btn">
+              <img
+                src={filter}
+                alt="filter"
+                className="hero-btn-img"
+              />
+              Filters
+            </button>
+          </div>
+        </div>
+      </div>
+      {showLogin ? (
+        <div className="loginModal">
+          <div>Sign up</div>
+          <div>Login</div>
+        </div>
+      ) : null}
+    </Wrapper>
   );
 };
 
-export default Navbar;
+export default NavbarHero;

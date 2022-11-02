@@ -1,7 +1,7 @@
 import React from "react";
+import Wrapper from "../assets/wrappers/Hero";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import { LeftArrow, RightArrow } from "./Arrows";
-import Wrapper from "../assets/wrappers/Hero";
 import filter from "../assets/images/filter.svg";
 // import data from "../data";
 import { CardIcon } from "./CardIcon";
