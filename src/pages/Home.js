@@ -3,7 +3,6 @@ import NavbarHero from "../components/NavbarHero";
 const Home = () => {
   return (
     <div>
-      {/* <Banner /> */}
       <NavbarHero />
       <CardsContainer />
       <Footer />
