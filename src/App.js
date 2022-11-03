@@ -10,7 +10,7 @@ function App() {
           element={<Home />}
         />
         <Route
-          path="/:id"
+          path=":id"
           element={<SingleCardPage />}
         />
         <Route
