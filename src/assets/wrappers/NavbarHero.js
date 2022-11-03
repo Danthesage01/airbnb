@@ -120,6 +120,13 @@ const Wrapper = styled.nav`
     padding: 0.6rem 0.3px;
     background: rgba(0, 0, 0, 0.2);
   }
+  .showLoginModal,
+  .hidLoginModal,
+  .showAuthPage,
+  .hideAuthPage {
+    display: none;
+  }
+
   @media screen and (min-width: 742px) {
     border-bottom: ${(props) =>
       props.home ? "1px solid rgba(0, 0, 0, 0.1)" : "none"};

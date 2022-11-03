@@ -7,7 +7,6 @@ import { IoPersonCircleSharp } from "react-icons/io5";
 import filter from "../assets/images/filter.svg";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import LoginModal from "./LoginModal";
 const Navbar = () => {
   const [showLogin, setShowLogin] = useState(false);
   console.log(showLogin);
