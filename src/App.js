@@ -10,7 +10,7 @@ function App() {
           element={<Home />}
         />
         <Route
-          path="airbnb/:id"
+          path=":id"
           element={<SingleCardPage />}
         />
         <Route

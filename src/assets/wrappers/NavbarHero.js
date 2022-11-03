@@ -121,7 +121,7 @@ const Wrapper = styled.nav`
     background: rgba(0, 0, 0, 0.2);
   }
   .showLoginModal,
-  .hidLoginModal,
+  .hideLoginModal,
   .showAuthPage,
   .hideAuthPage {
     display: none;
