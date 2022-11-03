@@ -30,7 +30,7 @@ const CardItem = (list) => {
         className="card-img-wrapper"
       >
         <Link
-          to={`/${id}`}
+          to={`/airbnb/${id}`}
           target="_blank"
         >
           <img
