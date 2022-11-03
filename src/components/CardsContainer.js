@@ -2,9 +2,12 @@ import React from "react";
 import CardItem from "./CardItem";
 import { useGlobalAirbnbContext } from "../context/context";
 const CardsContainer = () => {
-  const { listings } = useGlobalAirbnbContext();
+  const { listings, setShowMenubar } = useGlobalAirbnbContext();
   return (
-    <div className="section-center">
+    <div
+      className="section-center"
+      onClick={() => setShowMenubar(false)}
+    >
       <div className="container-center">
         {listings.map((list) => {
           return (

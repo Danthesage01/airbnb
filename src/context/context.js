@@ -4,6 +4,8 @@ import data from "../data";
 const AirbnbContext = createContext();
 const AirbnbProvider = ({ children }) => {
   const [listings, setListings] = useState(data);
+  const [showMenubar, setShowMenubar] = useState(false);
+  const [showAuthPage, setShowAuthPage] = useState(false);
 
   const listingCategories = listings.reduce(
     (acc, item) => {
@@ -30,8 +32,19 @@ const AirbnbProvider = ({ children }) => {
 
   const handleClick = (e, category) => {
     setCategory(e.target.textContent);
+    setShowMenubar(false);
     filterProjects(category);
   };
+  const openAuthModal = () =>{
+    setShowMenubar(false)
+    setShowAuthPage(true)
+    // document.documentElement.style.overflow = "no"
+    document.body.style.overflowY = "hidden";
+  }
+  const closeAuthModal = () =>{
+    setShowAuthPage(false)
+     document.body.style.overflowY = "scroll";
+  }
   const filterProjects = (cat) => {
     if (cat === "Shared homes") {
       setListings(data);
@@ -40,6 +53,7 @@ const AirbnbProvider = ({ children }) => {
     let newListing = [...data];
     newListing = newListing.filter((project) => project.category === cat);
     setListings(newListing);
+    setShowMenubar(false);
   };
 
   return (
@@ -52,6 +66,12 @@ const AirbnbProvider = ({ children }) => {
         stateCategory,
         icons,
         setIcons,
+        showMenubar,
+        setShowMenubar,
+        showAuthPage,
+        setShowAuthPage,
+        openAuthModal,
+        closeAuthModal
       }}
     >
       {children}

@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import filter from "../assets/images/filter.svg";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import { LeftArrow, RightArrow } from "./Arrows";
@@ -14,6 +14,7 @@ import { LeftArrow, RightArrow } from "./Arrows";
 import { CardIcon } from "./CardIcon";
 import usePreventBodyScroll from "../hooks/usePreventBodyScroll";
 import { useGlobalAirbnbContext } from "../context/context";
+import AuthPage from "./AuthPage";
 
 function onWheel(apiObj, ev) {
   const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
@@ -31,23 +32,34 @@ function onWheel(apiObj, ev) {
 }
 
 const NavbarHero = () => {
-  const [showLogin, setShowLogin] = useState(false);
-  console.log(showLogin);
-
-  const { categories, icons } = useGlobalAirbnbContext();
+  const {
+    categories,
+    icons,
+    setShowMenubar,
+    showMenubar,
+    showAuthPage,
+    openAuthModal,
+  } = useGlobalAirbnbContext();
   const { disableScroll, enableScroll } = usePreventBodyScroll();
+
   return (
     <Wrapper>
       <div className="nav">
         <div className="section-center nav-center">
-          <Link to="/">
+          <Link
+            to="/"
+            onClick={() => setShowMenubar(false)}
+          >
             <img
               src={logo}
               alt="airbnb-logo"
               className="logo"
             />
           </Link>
-          <div className=" search-bar-lg">
+          <div
+            className=" search-bar-lg"
+            onClick={() => setShowMenubar(false)}
+          >
             <div className="text-bold text-bold-pd">Anywhere</div>
             <span className="divider"></span>
             <div className="text-bold">Any week</div>
@@ -81,14 +93,22 @@ const NavbarHero = () => {
           </div>
           <div className="host-bar-wrapper">
             <div className="host-bar">
-              <div className="text-bold host-text">Become a Host</div>
-              <div className="host-globe">
+              <div
+                className="text-bold host-text"
+                onClick={() => setShowMenubar(false)}
+              >
+                Become a Host
+              </div>
+              <div
+                className="host-globe"
+                onClick={() => setShowMenubar(false)}
+              >
                 <FiGlobe />
               </div>
               <div
                 className="host-logo"
                 onClick={() => {
-                  setShowLogin((prev) => !prev);
+                  setShowMenubar((prevState) => !prevState);
                 }}
               >
                 <GiHamburgerMenu className="host-ham" />
@@ -98,7 +118,10 @@ const NavbarHero = () => {
           </div>
         </div>
       </div>
-      <div className="hero">
+      <div
+        className="hero"
+        onClick={() => setShowMenubar(false)}
+      >
         <div className="section-center hero-global">
           <div
             onMouseEnter={disableScroll}
@@ -135,12 +158,29 @@ const NavbarHero = () => {
           </div>
         </div>
       </div>
-      {showLogin ? (
-        <div className="loginModal">
-          <div>Sign up</div>
-          <div>Login</div>
-        </div>
-      ) : null}
+      <div className={showMenubar ? "showLoginModal" : "hideLoginModal"}>
+        <p
+          className="signupP"
+          onClick={() => openAuthModal()}
+        >
+          Sign up
+        </p>
+        <p
+          className="loginP"
+          onClick={() => openAuthModal()}
+        >
+          Login
+        </p>
+        <div className="line-break" />
+        <p className="loginPa">Host your home</p>
+        <p className="loginPa">Host an experience</p>
+        <p className="loginPa">Help</p>
+      </div>
+      <div
+        className={showAuthPage ? "showAuthPage" : "hideAuthPage"}
+      >
+        <AuthPage />
+      </div>
     </Wrapper>
   );
 };

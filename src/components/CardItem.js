@@ -4,12 +4,13 @@ import Wrapper from "../assets/wrappers/CardItem";
 import { formatPrice } from "../context/context";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+
+
 const CardItem = (list) => {
   const { images, cost, dates, host, title, rating, id } = list;
   const { sub } = images;
-
   const [like, setLike] = useState(false);
-  const [main, setMain] = useState(sub[0].url)
+  const [main, setMain] = useState(sub[0].url);
 
 
   const newSub = sub.map((image, index) => {
@@ -18,17 +19,20 @@ const CardItem = (list) => {
         key={index}
         onClick={() => setMain(sub[index].url)}
         className={
-          main === image.url
-            ? "card-circle card-circle-active"
-            : "card-circle"
+          main === image.url ? "card-circle card-circle-active" : "card-circle"
         }
       ></div>
     );
   });
   return (
     <Wrapper list={list}>
-      <div className="card-img-wrapper">
-        <Link to={`/${id}`}>
+      <div
+        className="card-img-wrapper"
+      >
+        <Link
+          to={`/${id}`}
+          target="_blank"
+        >
           <img
             src={main}
             alt={title}

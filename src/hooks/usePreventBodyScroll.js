@@ -1,4 +1,5 @@
-import { useState,useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
+
 
 const preventDefault = (ev) => {
   if (ev.preventDefault) {
@@ -19,6 +20,7 @@ const disableBodyScroll = () => {
 
 function usePreventBodyScroll() {
   const [hidden, setHidden] = useState(false);
+
 
   useEffect(() => {
     hidden ? disableBodyScroll() : enableBodyScroll();

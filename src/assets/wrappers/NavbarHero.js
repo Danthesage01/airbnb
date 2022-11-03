@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.nav`
   height: 14rem;
   position: fixed;
-  z-index: 80;
+  z-index: 8;
   width: 100%;
   .nav {
     height: var(--nav-height);
@@ -284,15 +284,12 @@ const Wrapper = styled.nav`
       width: 130px;
     }
     .active {
-      /* width: 6rem;
-    height: .1rem; */
       padding-bottom: 0.6rem;
       text-align: center;
       border-bottom: 3px solid black;
     }
     .hero-gscroll {
       align-content: flex-start;
-      /* margin-left: -2rem; */
       width: 90%;
     }
     .hero-gbtn {
@@ -321,7 +318,7 @@ const Wrapper = styled.nav`
       align-items: center;
       justify-content: center;
       right: 1%;
-      z-index: 33333333;
+      z-index: 2;
       width: 2rem;
       height: 2rem;
       user-select: none;
@@ -335,17 +332,88 @@ const Wrapper = styled.nav`
     .move-hide-opacity {
       opacity: 0;
     }
-    .loginModal {
+    .hideLoginModal {
+      display: none;
+    }
+    .showLoginModal {
+      display: block;
       width: 250px;
-      height: 250px;
+      height: 210px;
       position: absolute;
-      padding: 1rem;
       background: var(--clr-white);
-      box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
-      z-index: 5500000000006755;
+      box-shadow: 0px 0px 1px 1.2px rgba(0, 0, 0, 0.1);
+      z-index: 8;
       top: 4.5rem;
       right: 5.25rem;
       border-radius: var(--borderRadius);
+      padding-bottom: 1rem;
+    }
+    .signupP {
+      padding: 0.5rem 0.7rem;
+      font-weight: 500;
+      margin-top: 0.2rem;
+    }
+    .loginP {
+      padding: 0.5rem 0.7rem;
+      padding-top: 0;
+    }
+    .loginPa {
+      padding: 0.5rem 0.7rem;
+    }
+    .line-break {
+      width: 100%;
+      height: 0.005rem;
+      background: #dfdfdf;
+      margin: 0.3rem 0;
+    }
+    .showLoginModal p:hover {
+      background: #f4f4f4;
+      cursor: pointer;
+    }
+    .hideAuthPage {
+      display: none;
+    }
+    .showAuthPage {
+      display: block;
+      scroll-behavior: unset;
+      width: 100vw;
+      height: 100vw;
+      position: fixed;
+      scroll-snap-stop: unset;
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 1px 1.2px rgba(0, 0, 0, 0.1);
+      z-index: 85;
+      top: 0;
+      right: 0;
+      padding-bottom: 1rem;
+    }
+    .authPageInner {
+      display: static;
+      width: 600px;
+      height: 700px;
+      background: var(--clr-white);
+      margin: 2rem auto;
+      border-radius: var(--borderRadius);
+    }
+    .authPage-header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .authPage-header p {
+      font-weight: 500;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .authPage-header-btn {
+      cursor: pointer;
+    }
+    .authPage-main {
+      padding: 1.5rem;
+    }
+    .authPage-main h4 {
+      font-size: 1.5rem;
     }
   }
   @media screen and (min-width: 992px) {
