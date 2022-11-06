@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 const Navbar = () => {
   const [showLogin, setShowLogin] = useState(false);
-  console.log(showLogin);
+
+    const [userLogin, SetUserLogin] = useState(false);
+
   return (
     <React.Fragment>
       <Wrapper home>
@@ -66,7 +68,9 @@ const Navbar = () => {
                 }}
               >
                 <GiHamburgerMenu className="host-ham" />
+                <div className="personIconWrapper">
                 <IoPersonCircleSharp fontSize={"2.2rem"} />
+                </div>
               </div>
             </div>
           </div>

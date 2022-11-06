@@ -345,7 +345,7 @@ const Wrapper = styled.nav`
     .showLoginModal {
       display: block;
       width: 250px;
-      height: 210px;
+      min-height: 210px;
       position: absolute;
       background: var(--clr-white);
       box-shadow: 0px 0px 1px 1.2px rgba(0, 0, 0, 0.1);
@@ -397,12 +397,40 @@ const Wrapper = styled.nav`
     .authPageInner {
       display: static;
       width: 600px;
-      height: 700px;
+      min-height: 300px;
       background: var(--clr-white);
       margin: 2rem auto;
       border-radius: var(--borderRadius);
+      padding-bottom: 1rem;
     }
-    .authPage-header {
+    .authPageInner2 {
+      margin: 15rem auto;
+    }
+    .personIconWrapper {
+      position: relative;
+      height: 2.2rem;
+    }
+    .personIconWrapper::after {
+      content: "1";
+      position: absolute;
+      color: var(--clr-white);
+      background: var(--clr-airbnb);
+      top: -0.1rem;
+      right: 0rem;
+      display: grid;
+      place-items: center;
+      width: 0.875rem;
+      height: 0.875rem;
+      border-radius: 50%;
+      border: 1px solid var(--clr-white);
+      font-size: 0.5rem;
+      text-align: center;
+    }
+.personImgPhoto{
+font-size: 2.2rem;
+
+}
+    /* .authPage-header {
       display: grid;
       grid-template-columns: auto 1fr;
       align-items: center;
@@ -421,7 +449,7 @@ const Wrapper = styled.nav`
     }
     .authPage-main h4 {
       font-size: 1.5rem;
-    }
+    } */
   }
   @media screen and (min-width: 992px) {
     .hero-card-icon {

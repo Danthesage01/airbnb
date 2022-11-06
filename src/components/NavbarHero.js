@@ -15,6 +15,7 @@ import { CardIcon } from "./CardIcon";
 import usePreventBodyScroll from "../hooks/usePreventBodyScroll";
 import { useGlobalAirbnbContext } from "../context/context";
 import AuthPage from "./AuthPage";
+import { useGlobalAuthContext } from "../context/UserAuthContext";
 
 function onWheel(apiObj, ev) {
   const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
@@ -42,6 +43,12 @@ const NavbarHero = () => {
   } = useGlobalAirbnbContext();
   const { disableScroll, enableScroll } = usePreventBodyScroll();
 
+  const { userLogin, setUserLogin } = useGlobalAuthContext();
+
+  const logoutUser = ()=>{
+    setShowMenubar(false)
+      setUserLogin(false)
+  }
   return (
     <Wrapper>
       <div className="nav">
@@ -112,7 +119,9 @@ const NavbarHero = () => {
                 }}
               >
                 <GiHamburgerMenu className="host-ham" />
-                <IoPersonCircleSharp fontSize={"2.2rem"} />
+                <div className={userLogin ? "personIconWrapper" : null}>
+                  <IoPersonCircleSharp className="personImgPhoto" />
+                </div>
               </div>
             </div>
           </div>
@@ -159,26 +168,47 @@ const NavbarHero = () => {
         </div>
       </div>
       <div className={showMenubar ? "showLoginModal" : "hideLoginModal"}>
-        <p
-          className="signupP"
-          onClick={() => openAuthModal()}
-        >
-          Sign up
-        </p>
-        <p
-          className="loginP"
-          onClick={() => openAuthModal()}
-        >
-          Login
-        </p>
-        <div className="line-break" />
-        <p className="loginPa">Host your home</p>
-        <p className="loginPa">Host an experience</p>
-        <p className="loginPa">Help</p>
+        {!userLogin ? (
+          <div>
+            <p
+              className="signupP"
+              onClick={() => openAuthModal()}
+            >
+              Sign up
+            </p>
+            <p
+              className="loginP"
+              onClick={() => openAuthModal()}
+            >
+              Login
+            </p>
+            <div className="line-break" />
+            <p className="loginPa">Host your home</p>
+            <p className="loginPa">Host an experience</p>
+            <p className="loginPa">Help</p>
+          </div>
+        ) : (
+          <div>
+            <p className="signupP">Messages</p>
+            <p className="signupP">Notifications</p>
+            <p className="signupP">Trips</p>
+            <p className="signupP">Wishlists</p>
+            <div className="line-break" />
+            <p className="loginPa">Host your home</p>
+            <p className="loginPa">Host an experience</p>
+            <p className="loginPa">Account</p>
+            <div className="line-break" />
+            <p className="loginPa">Help</p>
+            <p
+              className="loginPa"
+              onClick={() => logoutUser()}
+            >
+              Log out
+            </p>
+          </div>
+        )}
       </div>
-      <div
-        className={showAuthPage ? "showAuthPage" : "hideAuthPage"}
-      >
+      <div className={showAuthPage ? "showAuthPage" : "hideAuthPage"}>
         <AuthPage />
       </div>
     </Wrapper>
