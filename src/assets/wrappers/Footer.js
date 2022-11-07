@@ -18,6 +18,26 @@ const Wrapper = styled.footer`
     justify-content: space-between;
     gap: 0.5rem;
   }
+  .navbarListItem {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbarListItemName,
+  .navbarListItemNameActive {
+    margin-top: 0.25rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: #8f8f8f;
+  }
+  .navbarListItemNameActive {
+    color: #222;
+  }
+  .activeIcon{
+    color: var(--clr-airbnb);
+  }
 
   .hero-category {
     margin-top: -0.1rem;

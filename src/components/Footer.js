@@ -5,35 +5,155 @@ import { BiMessage } from "react-icons/bi";
 import { FiSearch, FiHeart } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { FaAirbnb } from "react-icons/fa";
+import { useLocation, useNavigate} from "react-router-dom"
+import { useGlobalAuthContext } from "../context/UserAuthContext";
+
 const Footer = () => {
+ const navigate = useNavigate()
+ const location = useLocation()
+
+ const pathMatchRoute = (route) =>{
+  if(route === location.pathname){
+    return true
+  }
+ }
+
+  const { userLogin, setUserLogin } = useGlobalAuthContext();
+
+  const logoutUser = () => {
+    setUserLogin(false);
+  };
+ 
   return (
     <Wrapper>
       <div className="section-center">
-        <div className="sm-footer-center">
-          <div>
-            <FiSearch
-              fontSize={"1.2rem"}
-              color="#ff385c"
-            />
-            <p>Explore</p>
+        {userLogin ? (
+          <div className="sm-footer-center">
+            <div
+              className="navbarListItem"
+              onClick={() => navigate("/")}
+            >
+              <FiSearch
+                fontSize={"1.2rem"}
+                className={pathMatchRoute("/") ? "activeIcon" : null}
+              />
+              <p
+                className={
+                  pathMatchRoute("/")
+                    ? "navbarListItemNameActive"
+                    : "navbarListItemName"
+                }
+              >
+                Explore
+              </p>
+            </div>
+            <div className="navbarListItem">
+              <FiHeart fontSize={"1.2rem"} />
+              <p
+                className={
+                  pathMatchRoute("/wishlists")
+                    ? "navbarListItemNameActive"
+                    : "navbarListItemName"
+                }
+              >
+                Wishlists
+              </p>
+            </div>
+            <div className="navbarListItem">
+              <FaAirbnb fontSize={"1.2rem"} />
+              <p
+                className={
+                  pathMatchRoute("/trips")
+                    ? "navbarListItemNameActive"
+                    : "navbarListItemName"
+                }
+              >
+                Trips
+              </p>
+            </div>
+            <div className="navbarListItem">
+              <BiMessage fontSize={"1.2rem"} />
+              <p
+                className={
+                  pathMatchRoute("/inbox")
+                    ? "navbarListItemNameActive"
+                    : "navbarListItemName"
+                }
+              >
+                Inbox
+              </p>
+            </div>
+            <div
+              className="navbarListItem"
+              onClick={() => navigate("/profile")}
+            >
+              <CgProfile
+                fontSize={"1.2rem"}
+                className={pathMatchRoute("/profile") ? "activeIcon" : null}
+              />
+              <p
+                className={
+                  pathMatchRoute("/profile")
+                    ? "navbarListItemNameActive"
+                    : "navbarListItemName"
+                }
+              >
+                Profile
+              </p>
+            </div>
           </div>
-          <div>
-            <FiHeart fontSize={"1.2rem"} />
-            <p>Wishlists</p>
+        ) : (
+          <div className="sm-footer-center">
+            <div
+              className="navbarListItem"
+              onClick={() => navigate("/")}
+            >
+              <FiSearch
+                fontSize={"1.2rem"}
+                className={pathMatchRoute("/") ? "activeIcon" : null}
+              />
+              <p
+                className={
+                  pathMatchRoute("/")
+                    ? "navbarListItemNameActive"
+                    : "navbarListItemName"
+                }
+              >
+                Explore
+              </p>
+            </div>
+            <div className="navbarListItem">
+              <FiHeart fontSize={"1.2rem"} />
+              <p
+                className={
+                  pathMatchRoute("/wishlists")
+                    ? "navbarListItemNameActive"
+                    : "navbarListItemName"
+                }
+              >
+                Wishlists
+              </p>
+            </div>
+            <div
+              className="navbarListItem"
+              onClick={() => navigate("/login")}
+            >
+              <CgProfile
+                fontSize={"1.2rem"}
+                className={pathMatchRoute("/login") ? "activeIcon" : null}
+              />
+              <p
+                className={
+                  pathMatchRoute("/login")
+                    ? "navbarListItemNameActive"
+                    : "navbarListItemName"
+                }
+              >
+                Log in
+              </p>
+            </div>
           </div>
-          <div>
-            <FaAirbnb fontSize={"1.2rem"} />
-            <p>Trips</p>
-          </div>
-          <div>
-            <BiMessage fontSize={"1.2rem"} />
-            <p>Inbox</p>
-          </div>
-          <div>
-            <CgProfile fontSize={"1.2rem"} />
-            <p>Profile</p>
-          </div>
-        </div>
+        )}
         <div className="bg-footer-center">
           <div className="start-footer">
             <p className="footer-date">
