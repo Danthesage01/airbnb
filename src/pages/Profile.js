@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 
 const Profile = () => {
-  const { userLogin, setUserLogin } = useGlobalAuthContext();
+  const { setUserLogin } = useGlobalAuthContext();
 const navigate = useNavigate()
    const logoutUser = () => {
     navigate("/")

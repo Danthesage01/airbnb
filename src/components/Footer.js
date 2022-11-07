@@ -18,12 +18,8 @@ const Footer = () => {
   }
  }
 
-  const { userLogin, setUserLogin } = useGlobalAuthContext();
+  const { userLogin } = useGlobalAuthContext();
 
-  const logoutUser = () => {
-    setUserLogin(false);
-  };
- 
   return (
     <Wrapper>
       <div className="section-center">
