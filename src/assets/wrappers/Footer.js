@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.footer`
-  z-index: 0;
+  z-index: 2;
   height: 3.5rem;
   padding-top: 0.5rem;
   padding-bottom: 1rem;

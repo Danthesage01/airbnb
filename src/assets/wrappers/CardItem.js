@@ -39,7 +39,7 @@ const Wrapper = styled.section`
     transform: translateX(-50%);
   }
   .card-heart-wrapper {
-    z-index: 5;
+    z-index: 2;
     font-size: 1.8rem;
     position: absolute;
     right: 6%;

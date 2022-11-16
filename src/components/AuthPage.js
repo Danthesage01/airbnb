@@ -339,7 +339,7 @@ const Wrapper = styled.div`
   }
   .other-input-btn {
     margin: 0.75rem 0;
-    display: block;
+    /* display: block; */
     width: 100%;
     padding: 0.65rem;
     border: 1px solid #222;
@@ -350,17 +350,15 @@ const Wrapper = styled.div`
     letter-spacing: 0.05rem;
     text-align: center;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 20px 450px;
     align-items: center;
   }
-  /* .other-input-btn:last-child {
-      margin-bottom: 1rem;
-    } */
-  .input-img {
-    width: 100%;
+
+  /* .input-img {
+    width: 10%;
     height: 1rem;
     object-fit: cover;
-  }
+  } */
   .captcha-body {
     margin: 0.5rem 0;
     border-radius: var(--borderRadius);
