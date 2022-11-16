@@ -4,14 +4,19 @@ import Wrapper from "../assets/wrappers/CardItem";
 import { formatPrice } from "../context/context";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const CardItem = (list) => {
   const { images, cost, dates, host, title, rating, id } = list;
   const { sub } = images;
   const [like, setLike] = useState(false);
   const [main, setMain] = useState(sub[0].url);
-
 
   const newSub = sub.map((image, index) => {
     return (
@@ -26,9 +31,8 @@ const CardItem = (list) => {
   });
   return (
     <Wrapper list={list}>
-      <div
-        className="card-img-wrapper"
-      >
+    
+      <div className="card-img-wrapper">
         <Link
           to={`/${id}`}
           target="_blank"
@@ -49,6 +53,7 @@ const CardItem = (list) => {
           {like ? <AiFillHeart /> : <AiOutlineHeart />}
         </div>
       </div>
+
       <footer className="footer">
         <Link to={`/${id}`}>
           <div className="card-title">
