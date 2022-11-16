@@ -1,0 +1,47 @@
+.carousel {
+  overflow: hidden;
+  position: relative;  
+  border-radius: var(--borderRadius);
+
+}
+.inner {
+  white-space: nowrap;
+  transition: transform 1s;
+  border-radius: var(--borderRadius);
+}
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  color: #fff;
+  border-radius: var(--borderRadius);
+}
+.carousel-img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--borderRadius);
+}
+.indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.indicators > button {
+  margin: 5px;
+}
+.card-circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid #f0f0f0;
+  background: #ccc;
+  border-radius: 100%;
+  margin: 1px;
+}
+.card-circle-active {
+  background: white;
+}

@@ -4,56 +4,37 @@ import Wrapper from "../assets/wrappers/CardItem";
 import { formatPrice } from "../context/context";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import Carousel, { CarouselItem } from "../Carousel";
 
 const CardItem = (list) => {
   const { images, cost, dates, host, title, rating, id } = list;
   const { sub } = images;
   const [like, setLike] = useState(false);
-  const [main, setMain] = useState(sub[0].url);
 
-  const newSub = sub.map((image, index) => {
-    return (
-      <div
-        key={index}
-        onClick={() => setMain(sub[index].url)}
-        className={
-          main === image.url ? "card-circle card-circle-active" : "card-circle"
-        }
-      ></div>
-    );
-  });
   return (
     <Wrapper list={list}>
-    
       <div className="card-img-wrapper">
-        <Link
-          to={`/${id}`}
-          target="_blank"
-        >
-          <img
-            src={main}
-            alt={title}
-            className="card-img"
-          />
-        </Link>
-        <div className="card-circle-wrapper">{newSub}</div>
+        <Carousel sub={sub}>
+          {sub.map((item) => {
+            return (
+              <CarouselItem
+                key={item.id}
+                {...item}
+              />
+            );
+          })}
+        </Carousel>
+
         <div
-          className={
-            like ? "card-heart-wrapper heart-like" : "card-heart-wrapper"
-          }
+          // className={
+          //   like ? "card-heart-wrapper heart-like" : "card-heart-wrapper"
+          // }
+          className="card-heart-wrapper"
           onClick={() => setLike(!like)}
         >
-          {like ? <AiFillHeart /> : <AiOutlineHeart />}
+          {like ? <AiFillHeart className="heart-like" /> : <AiOutlineHeart />}
         </div>
       </div>
-
       <footer className="footer">
         <Link to={`/${id}`}>
           <div className="card-title">

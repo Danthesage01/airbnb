@@ -30,17 +30,6 @@ const Wrapper = styled.section`
   .faint p {
     margin-top: -0.3rem;
   }
-  .card-circle {
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid #f0f0f0;
-    /* background: #ccc; */
-    border-radius: 100%;
-    margin: 2px;
-  }
-  .card-circle-active {
-    background: white;
-  }
   .card-circle-wrapper {
     z-index: 2;
     position: absolute;
@@ -56,9 +45,13 @@ const Wrapper = styled.section`
     right: 6%;
     top: 3%;
     color: var(--clr-white);
+    cursor: pointer;
   }
   .heart-like {
     color: var(--clr-airbnb);
+  }
+  .footer {
+    margin-top: 1rem;
   }
   .footer a {
     text-decoration: none;
