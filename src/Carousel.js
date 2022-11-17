@@ -25,9 +25,9 @@ const Carousel = ({ children, sub }) => {
   // const [main, setMain] = useState(sub[0].url);
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
-      newIndex = React.Children.count(children) - 1;
-    } else if (newIndex >= React.Children.count(children)) {
       newIndex = 0;
+    } else if (newIndex >= React.Children.count(children)) {
+        newIndex = React.Children.count(children) - 1;
     }
     setActiveIndex(newIndex);
   };
