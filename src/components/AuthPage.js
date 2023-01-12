@@ -150,12 +150,12 @@ const AuthPage = () => {
             </button>
           </form>
         </div>
-        <div className="authPage-divider">
+        {/* <div className="authPage-divider">
           <div className="divider-break"></div>
           <div>or</div>
           <div className="divider-break"></div>
-        </div>
-        <div className="authPage-footer">
+        </div> */}
+        {/* <div className="authPage-footer">
           <button className="other-input-btn">
             <img
               src={facebook}
@@ -188,7 +188,7 @@ const AuthPage = () => {
             />
             continue with Email
           </button>
-        </div>
+        </div> */}
       </div>
       <div style={{ display: visible ? "block" : "none" }}>
         <div className="authPage-header">
